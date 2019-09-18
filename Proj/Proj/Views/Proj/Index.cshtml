@@ -5,3 +5,20 @@
 
 <h2>Index</h2>
 
+<h2 style="text-align:center">Welcome</h2>
+@*@using (Html.BeginForm("RegisterCompany", "Project", FormMethod.Post))*@
+
+@*{*@
+
+<div style="border-style:groove;height:190px;width: 30%; left: 30px;margin-left: 60px;">
+    <h3 style="text-align:center">Register here</h3><br />
+    @*<input type="checkbox" name="Looking for a job" value="Looking for a job" />*@
+    <label for="Offering a job">Offering a job:</label><br />
+    <input id="btn" style="text-align:center" type="button" name="Add Company" value="Register Company" onclick="location.href='@Url.Action("RegisterCompany", "Project", FormMethod.Get)'" /><br />
+    @*<input type="checkbox" name="Offering a job" value="Offering a job" />*@
+    <label for="Looking for a job">Looking for a job:</label><br />
+    <input id="btn" style="text-align:center" type="button" name="Search Job" value="Register Person" onclick="location.href='@Url.Action("RegisterUser", "Project", FormMethod.Get)'" /><br />
+    <br />
+
+
+</div>
