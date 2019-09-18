@@ -13,5 +13,9 @@ namespace Proj.Controllers
         {
             return View();
         }
+        public ActionResult RegisterUser()
+        {
+            return View();
+        }
     }
 }

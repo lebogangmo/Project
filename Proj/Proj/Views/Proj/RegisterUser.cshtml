@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "RegisterUser";
+}
+
+<h2>Register User</h2>
+
+
+@using (Html.BeginForm("ViewApplicants", "Proj", FormMethod.Get))
+{
+
+    <label for="FName">First Name:</label><br />
+    <input id="Name" type="text" name="Name" required /> <br />
+
+    <label for="Lastname">Last Name:</label><br />
+    <input id="LName" type="text" name="LName" required /> <br />
+
+    <label for="ID">ID:</label><br />
+    <input id="ID" type="number" name="ID" required /> <br />
+
+    <label for="Email">Email:</label><br />
+    <input id="Email" type="text" name="Email" required /> <br />
+
+    <label for="Cell">Cell Number</label><br />
+    <input id="Cell" type="text" name="Cell" required /> <br />
+
+    <label for="Home Language">Languages:</label><br />
+    <select class="form-control" id="SelectLanguage" name="SelectLanguage" required>
+        <option>Select Language</option>
+        <option>Afrikaans</option>
+        <option>English</option>
+        <option>Ndebele</option>
+        <option>Northern Sotho</option>
+        <option>Tswana</option>
+        <option>Tsonga</option>
+        <option>Venda</option>
+        <option>Xhosa</option>
+        <option>Zulu</option>
+    </select><br />
+
+
+    <label for="qualification">Qualification:</label><br />
+    //select list populated bu
+    <input id="qualification" type="text" name="qualification" /> <br />
+
+    <label for="Experience">Experience (years):</label><br />
+    <input id="Experience" type="number" name="Experience" required /> <br />
+
+    <label for="Skills">Skills:</label><br />
+    <select class="form-control" id="skills" name="skills" required>
+        <option>SQL</option>
+        <option>SAS</option>
+        <option>MS Office</option>
+        <option>Web design</option>
+    </select><br />
+
+    <label for="Provice">Province</label><br />
+    <select class="form-control" id="province" name="province" required>
+        <option>Gauteng</option>
+        <option>Eastern Cape</option>
+        <option>Limpopo</option>
+    </select><br />
+
+    //this drop down needs to repopulate based on which province is chosen
+    <label for="City">City</label><br />
+    <select class="form-control" id="city" name="city" required>
+        <option>Pretoria</option>
+        <option>Johannesburg</option>
+        <option>Cape Town</option>
+        <option>Polokwane</option>
+        <option>Bloemfontein</option>
+    </select><br />
+
+
+    <label for="UserName">User name</label><br />
+    <input id="UserName" type="text" name="UserName" required /> <br />
+
+    <label for="Password">Create Password</label><br />
+    <input id="Password" type="password" name="Password" required /> <br />
+
+    <label for="Password">Re-enter Password</label><br />
+    <input id="VPassword" type="password" name="VPassword" required /> <br />
+
+
+    <input type="checkbox" name="Criminal Record" value="Criminal Record" />
+    <label for="Criminal Record">Criminal Record:</label><br />
+
+
+    <button type="submit">Register</button>
+
+    @*<input id="btnHome" style="text-align:center" type="button" name="Register" value="Register" onclick="location.href='@Url.Action("JobOpportunities", "Project", FormMethod.Get)'" />*@
+
+    @*<input id="btn" type="button" name="Home" value="Back" onclick="location.href='@Url.Action("Homepage", "Project", FormMethod.Get)'" />*@
+}
